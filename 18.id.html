@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Id Html</title>
+        <style>
+            #myHeader{
+                background-color: lightblue;
+                color: black;
+                padding: 40px;
+                text-align: center;
+            }
+            .city{
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">HTML The id Attribute</h1>
+        <H3 id="c4">#Using The id Attribute</H3>
+        <hr>
+        <p>The html id attribute specifies a unique id for an html element.
+            The value of the id attribute must be unique within the html document.
+        </p>
+        <p>The id attribute is used to point to a specific style declaration in a style sheet.
+            It is also  used by javaScript to access and manipulate the element with the specific id.
+        </p>
+        <p>In the following example we have an h1 element that point to the id name "myHeader". The h1 element will be styled according to the #myHeader style definition in the head section:</p>
+        <h1 id="myHeader">My Header</h1>
+        
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan</p>
+        <h3>#Bookmarks with ID and Links</h3>
+        <hr>
+        <a href="#c4">Jump to Using the id attribute</a>
+        <h3>#Using The id Attribute in JavaScript</h3>
+        <hr>
+        <button onclick="displayResult()">Change Text</button>
+        <button onclick="displayHeader()">Header</button>
+        <script>
+            function displayResult(){
+                document.getElementById("myHeader").innerHTML="Have a nice day!";
+            }
+            function displayHeader(){
+                document.getElementById("myHeader").innerHTML="My Header";
+            }
+        </script>
+    </body>
+</html>
