@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript HTML</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">HTML JavaScript</h2>
+        <h3>#Use JavaScript to Change Tex</h3>
+        <hr>
+        <p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+        <p id="demo"></p>
+        <h3>#My First JavaScript can change html content.</h3>
+        <hr>
+        <p>JavaScript can change the context of an HTML element:</p>
+        <button onclick="myFunction()">Click Me!</button>
+        <p id="demo2">This is a demostration.</p>
+        <h3>#JavaScript can change HTML styles.</h3>
+        <hr>
+        <p id="demo3">JavaScript can change the style of an HTML element.</p>
+        <button onclick="canStyle()">Click Me</button>
+        <h3>#JavaScript can change Attribute</h3>
+        <hr>
+        <img id="myImage" src="java.png" width="100" height="180">
+        <p>
+            <button onclick="light(1)">light on</button>
+            <button onclick="light(0)">light of</button>
+        </p>
+        <script>
+            function myFunction(){
+                document.getElementById("demo2").innerHTML="Hello Friend, this is my first javascript!";
+            }
+            function canStyle(){
+                document.getElementById("demo3").style.fontSize="25px";
+                document.getElementById("demo3").style.color="white";
+                document.getElementById("demo3").style.backgroundColor="black"
+                document.getElementById("demo3").style.padding="10px";
+            }
+            function light(sw){
+                var pic;
+                if(sw==0){
+                    pic="java.png";
+                }else{
+                    pic="java-red.ico";
+                }
+                document.getElementById("myImage").src=pic;
+            }
+            document.getElementById("demo").innerHTML="Hellow JavaScript!";
+        </script>
+    </body>
+</html>
