@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS layout flexbox html</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /*style the header*/
+            header{
+                background-color: black;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            /*container for flexboxes*/
+            section{
+                display: -webkit-flex;
+                display: flex;
+            }
+            nav{
+                -webkit-flex:1;
+                -ms-flex: 1;
+                flex: 1;
+                background: #ccc;
+                padding: 20px;
+            }
+            /*style the list inside the menu*/
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            /*style the content*/
+            article{
+                -webkit-flex:3;
+                -ms-flex: 3;
+                flex: 3;
+                background-color: #f1f1f1;
+                padding: 10px;
+            }
+            /*style the footer*/
+            footer{
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            /*Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other*/
+            @media(max-width: 600px;){
+                section{
+                    -webkit-flex-direction:columns;
+                    flex-direction: column;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>#CSS Layout flexbox</h2>
+        <hr>
+        <p>In this example, we have created a header, two columns/boxes and a footer.on smaller screen, the columns will stack on top of each other.</p>
+        <p>Resize the browser window to see the responsive effect.</p>
+        <p><strong>Note:</strong> Flexbox is not supported in internet explorer 10 and earlier versions.</p>
+        <header>Cities</header>
+        <section>
+            <nav>
+                <ul>
+                    <li><button onclick="london()">London</button></li>
+                    <li><button onclick="paris()">Paris</button></li>
+                    <li><button onclick="tokyo()">Tokyo</button></li>
+                </ul>
+            </nav>
+            <article>
+                <h1 id="heading">London</h1>
+                <p id="p1"> London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                <p id="p2">Standing on the Riveer Thames, london has been a major settlement for twon millennia, its history going back to its founding by the romans, who named it londinium</p>
+            </article>
+        </section>
+        <footer>Footer</footer>
+        <p><a href="23.layout.html">back to 23.layout.html</a></p>
+        <script>
+            function london(){
+                document.getElementById("heading").innerHTML="London";
+                document.getElementById("p1").innerHTML="London is the capital city of England. It is the most populous city in the United Kingdom, with metropolitan area of over 13 milion inhabitants";
+                document.getElementById("p2").innerHTML="Standing on the river thames, london has been a major settlement for two millenia, its history going back to its founding by the romans, who named it londinium";
+            }
+            function paris(){
+                document.getElementById("heading").innerHTML="Paris";
+                document.getElementById("p1").innerHTML="Paris is the capital city of france";
+                document.getElementById("p2").innerHTML="standing on the river thames in paris";
+
+            }
+            function tokyo(){
+                document.getElementById("heading").innerHTML="Tokyo";
+                document.getElementById("p1").innerHTML="Tokyo is the capital city of Japan. It is the most populous city in the Tokyo, with metropolitan area of over 13 milion inhabitants";
+                document.getElementById("p2").innerHTML="standing on the river thames in tokyo";
+            }
+        </script>
+    </body>
+</html>

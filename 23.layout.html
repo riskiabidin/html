@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout HTML</title>
+        <style>
+            *{box-sizing: border-box;}
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /*Style the Header*/
+            header{
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            /* Create two columns/boxes that floats next to each other*/
+            nav{
+                float: left;
+               width: 30%;
+               height: 300px;/*only for demonstration, should be removed*/
+               background: #ccc;
+               padding: 20px;
+
+            }
+            /*style the list inside the menu*/
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px;/*only for demonstration, should be removed*/
+            }
+            /*clear floats after the columns*/
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /*style the footer*/
+            footer{
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            /*Responsive layout - makes the two colums/boxes stack on top of each other instead of next to each other, on smaill screens*/
+            @media(max-width: 600px){
+                nav, article{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center; background-color: black; color: white; padding: 20px;margin-top: 0;">HTML Layout Elements and Techniques</h2>
+        <p>Websites often dispaly content in multiple columns (like magazine or newspaper)</p>
+        <h3>#Example</h3>
+        <hr>
+        <h2>#CSS Layout Float</h2>
+        <p>In this example, we have created a header, two colums/boxes and a footer. On smaller screens, the colums will stack on top of each other</p>
+        <p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive)</p>
+        <header>
+            <h2>Cities</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Paris</a></li>
+x`                    <li><a href="#">Tokyo</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>London</h1>
+                <p>London is the capital city of England. It is the most populous city in United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                <p>Standing on the River Thames, London has been a major settlement for two millenia, its history going back to its founding by the Romans, who named it LOndinium.</p>
+            </article>
+        </section>
+        <footer>
+            <p>Footer</p>
+        </footer>
+        <h3>#HTML Layout Elements</h3>
+        <hr>
+        <ul>
+            <li>header:defines a header for a document or a section</li>
+            <li>nav:defines container for navigation links</li>
+            <li>section: defines a section in a document</li>
+            <li>aside:defines content aside form the content (like a sidebar)</li>
+            <li>footer:defines a footer for a document or a section</li>
+            <li>details:defines additional details</li>
+            <li>summary:defines a heading for detail elemen</li>
+        </ul>
+        <h3>#HTML Layout Techniques</h3>
+        <p>There are four different techiniques to create multicolumn layout. Each way has its pros and cons:</p>
+        <ul>
+            <li>CSS framework</li>
+            <li>CSS float property</li>
+            <li>CSS flexbox</li>
+            <li>CSS grid</li>
+        </ul>
+        <h3>#CSS Layout Float</h3>
+        <hr>
+        <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top each other.</p>
+        <p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter -HTML Responsive</p>
+        <header>
+            <h2>Cities</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><button onclick="london()">London</button></li>
+                    <li><button onclick="paris()">Paris</button></li>
+                    <li><button onclick="tokyo()">Tokyo</button></li>
+                </ul>
+            </nav>
+            <article>
+                <h1 id="heading">London</h1>
+                <p id="p1">London is the capital city of England. It is the most populous city in the United Kingdom, with metropolitan area of over 13 milion inhabitants</p>
+                <p id="p2">Standing on the river thames, london has been a major settlement for two millenia, its history going back to its founding by the romans, who named it londinium</p>
+            </article>
+        </section>
+        <footer>Footer</footer>
+        <h3>#CSS Layout Float</h3>
+        <hr>
+        <p><a href="layoutFlexbox.html">layout float</a></p>
+        <script>
+            function london(){
+                document.getElementById("heading").innerHTML="London";
+                document.getElementById("p1").innerHTML="London is the capital city of England. It is the most populous city in the United Kingdom, with metropolitan area of over 13 milion inhabitants";
+                document.getElementById("p2").innerHTML="Standing on the river thames, london has been a major settlement for two millenia, its history going back to its founding by the romans, who named it londinium";
+            }
+            function paris(){
+                document.getElementById("heading").innerHTML="Paris";
+                document.getElementById("p1").innerHTML="Paris is the capital city of france";
+                document.getElementById("p2").innerHTML="standing on the river thames in paris";
+
+            }
+            function tokyo(){
+                document.getElementById("heading").innerHTML="Tokyo";
+                document.getElementById("p1").innerHTML="Tokyo is the capital city of Japan. It is the most populous city in the Tokyo, with metropolitan area of over 13 milion inhabitants";
+                document.getElementById("p2").innerHTML="standing on the river thames in tokyo";
+            }
+        </script>
+    </body>
+</html>
