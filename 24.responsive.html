@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTMl Responsive web design</title>
+        /*setting the viewport*/
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Example</h3>
+        <hr/>
+        <p><a href="responsiveWebPage2.html">example</a></p>
+        <h2 style="text-align: center;">HTML Responsive Web Design</h2>
+        <p>Responsive web desing is about creating web pages that look good on devices!</p>
+        <p>A responsive web design will automatically adjust for  different screen sizes and viewsports</p>
+        <h3>#Responsive Images</h3>
+         <hr/>
+         <p>Responsive images are images nthat scale nicely to fit any browser size</p>
+         <h3>#using the width Property</h3>
+        <hr/>
+        <p>If the css width property is set to 100%, the image will be responsive and scale up and down:</p>
+        <img src="resto.png" style="width: 100%;">
+        <h3>#Using the max-width property</h3>
+        <hr/>
+        <p>If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:</p>
+        <img src="resto.png" style="max-width: 100%; height: auto;">
+        <h3>#Show diffenet images depending on browser width (element picture)</h3>
+        <hr/>
+        <p>The HTML picture element allows you to define different images for different browser window sizes.</p>
+        <p>Resize the browser window to see the image below change depending on the width:</p>
+        <picture>
+            <source srcset="resto.png" media="(max-width:600px)">
+            <source srcset="resto_putih.jpg" media="(max-width:1500px)">
+            <source srcset="java.png">
+                <img srcset="java-red.ico" alt="java ico" style="width: auto;">
+        </picture>
+        <h3>#Responsive Text Size</h3>
+        <hr/>
+        <p>The text size can be set with a "vw" unit, which means the "viewport width".</p>
+        <p>That way the text size will follow the size of the browser window:</p>
+        <h1 style="font-size: 10vw;">Responsive Text</h1>
+        <p style="font-size: 5vw;">Resize the browser window to see how the next size scale.</p>
+        <p style="font-size: 5vw;"> Use the "vw" unit when sizing the text. 10vw will set the size 10% of the viewport width.</p>
+        <p>Viewport is the browser window size. 1 vw=1% of viewport width. if the viewport is 50 cm wide, 1 vw is 0.5 cm.</p>
+        <h3>#Media Queries</h3>
+        <hr/>
+        <p>In addition to resize text and images, it is also common to use media queries in responsive web pages.</p>
+        <p>with media queries you can define completely different styles for different browser sizes.</p>
+        <p>Example:resize the browser window to see that the there div element beloq will display horizontal on large screen and stacked vertically on small screens:</p>
+        <p><a href="mediaqueries.html">Media Queries</a></p>
+        <H3>#Responsive web page - full example</H3>
+        <hr/>
+        <p>A responsive web page should look good on large desktop screens and on small mobile phones.</p>
+        <p><a href="responsiveWebPage.html">Responsive web page</a></p>
+    </body>
+</html>
