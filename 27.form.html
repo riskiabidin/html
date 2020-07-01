@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <h2>HTML Forms</h2>
+        <p>An HTML form is used to collect user input. The User input can then be sent to a server for processing.</p>
+        <p>Example:</p>
+        <strong>HTML forms</strong>
+        <form action="/action_page.php">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" value="Jhon"/><br/>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"/><br/>
+            <input type="submit" value="submit">
+            <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php"</p>
+        </form>
+        <h3>#The form Element:</h3>
+        <hr/>
+        <p>The html element defines a form that is used to collect user input:</p>
+        <p>An HTML for contains form elements.</p>
+        <p>Form elements are different types of input elements, like:text fields, checkboxes, radio buttons, submitbuttons and more.</p>
+        <h3>#The input Element</h3>
+        <hr/>
+        <p>The input element is the most important form element.</p>
+        <p>The input element is displayed in serveral ways, depending on the type attribute.</p>
+       <h3>Text Fields:</h3> 
+       <hr/>
+       <p>input type="text" defines a single-line input field for text input</p>
+        <p>Example:</p>
+        <form>
+            <label for="fname">First Name:</label><br/>
+            <input type="text" id="fname" name="fname"><br/>
+            <label for="lname">Last Name:</label><br/>
+            <input type="text" id="lname" name="lname"><br/>
+        </form>
+        <p>Note:The form itself is not visible. Also note that the default width of an input field is 20 characters.</p>
+        <h3>#The label Element</h3>
+        <p>Notice the use of the label element in the example above.</p>
+        <p>The label tag defines a label for many form elements.</p>
+        <p>The label element is useful for screen-reader users, because the screen-reader will read out loud the label when the user is focused on the input element</p>
+        <p>The label element also help users who have difficulty clicking on very small refions (such as radio buttons or checkboxes)- because when the user clicks the text within the label element, it toggles the radio button/checkbox</p>
+        <p>The for attribute of the label tag shluld be equal to the id attribute of the input element to bind them toghether</p>
+        <h3>#Radio Buttons</h3>
+        <hr/>
+        <p>input type="radio" defines a radio button. Radio button lea a user select one of a limitied number of choices.</p>
+        <form>
+            <input type="radio" id="male" name="gender" value="male"><label for="male">male</label><br/>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">female</label><br/>
+            
+        </form>
+        <h3>#The Submit Button</h3>
+        <hr/>
+        <p>input type="submit" defines a button for submitting the form data to form-handler.</p>
+        <p>The form-handler is typically a page on the server with a script for processing input data</p>
+        <p>The form-handler is specified in the form's action attribute.</p>
+        <form>
+            <label for="fname">First Name</label><br/>
+            <input type="text" id="fname" name="fname" value="jhon"/><br/>
+            <label for="lname">Last Name</label><br/>
+            <input type="text" id="lname" name="lname" value="doe"/><br/>
+            <input type="submit" value="submit"/>
+        </form>
+        <h3>#The Action Attribute</h3>
+        <hr/>
+        <p>The action attribute defines the action to be performed when the form is submitted.</p>
+        <p>Usually, the form data is sent to a page on the server when the user clicks on the submit button.</p>
+        <p>In the exampele above, the form data is sent to apage on the server called "/action_page.php". This page contains a server-side script that handles the form data:</p>
+        <!--<form action="/action_page.php"-->
+        <h3>#The target attribute</h3>    
+        <p>the target attribute spesifies if the submitte result will open in a new broser tab, a fram, or in the current window.</p>
+        <p>The default value is "_self" which means the form will be submitted in the current window.</p>
+        <p>To maek the form result open in a new browser tab, use the value "_black".</p>
+        <!--form action="/action_page.php" target="_blank"-->
+        <p>other legal values are "_parent", "_top", or name represnting the name of an iframe.</p>
+        <h3>#The method attribute</h3>
+        <hr/>
+        <p>The method attribute specifies the HTTp method (GET or POST) to be used when submiting the form data.</p>
+        <!--<form action="/action_page.php" method="get"> or <form action="/action_page.php" method="post">-->
+            <h3>#When to use GET?</h3>
+            <hr/>
+            <p>The default HTTP method when submitting form data is GET.</p>
+            <p>However, when GET is used, the form data will be visible in the page's adress field:</p>
+            <p>/action_page.php?firstname=Jhon&lastname=Doe</p>
+            <p><strong>Notes on GET:</strong></p>
+            <ul>
+                <li>Appends form-data into the URL in name/value pairs</li>
+                <li>The length of a URL is limited (2048 charackters)</li>
+                <li>Never use GET to send sensistive data!(will be visible in the URL)</li>
+                <li>Useful for form submissions where a user wants to bookmark the result</li>
+                <li>GET is better fo non-secure data, like query string in google</li>
+            </ul>
+            <h3>#When to Use POST?</h3>
+            <p>Always use POST if the form data contains sensitive or personal information. The POST method does method does not display the form data in the page address field.</p>
+            <p><strong>Notes on POST:</strong></p>
+            <ul>
+                <li>Post has no size limitations, and can be used to send large amouts of data.</li>
+                <li>Form submissions with POST cannot be bookmarked</li>
+            </ul>
+            <h3>#The Name Attribute</h3>
+            <hr/>
+            <p>Each input field must have a name attribute to be submitted"</p>
+            <p>example</p>
+            <form>
+                <label>First Name:</label><br/>
+                <input type="text" id="fname" name="fname" value="Jhon"><br/>
+                <input type=" submit" value="submit"/>  
+            </form>
+    </body>
+</html>
