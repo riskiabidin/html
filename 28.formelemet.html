@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Element HTML</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">HTML Form Elements</h2>
+    <p>This chapter describes all the different HTML form elements.</p>
+    <h3>#The input Element</h3>
+    <p>one of the most used form element is the input element.</p>
+    <p>The input eleent can be displayed in several ways, depending on the type attribute.</p>
+    <p>Example:</p>
+    <p><strong>The input Element</strong></p>
+    <form action="/action_page.php">
+        <label>First name:</label><br />
+        <input type="text" id="fname" name="fname" value="riski" /><br />
+        <input type="submit" value="submit" />
+    </form>
+    <p>if the type attribute is omitted, the input field gets the default type:"text".</p>
+    <h3>#The select element.</h3>
+    <hr />
+    <p>The select element defines a drop-down list:</p>
+    <p>Example:</p>
+    <form>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit" value="submit" />
+    </form>
+    <p>The option elements defines an option that can be selected.</p>
+    <p>By default, the first item in the drop-down list is selected</p>
+    <p>To define a pre-selected option, add the selected attribute to the option</p>
+    <form>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat" selected>Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit" value="submit" />
+    </form>
+    <h4>Visible values:</h4>
+    <p>Use the size attribute to sepecify the number of visible values</p>
+    <form>
+        <select id="cars" name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit" value="submit" />
+    </form>
+    <h4>Allow Multiple selections:</h4>
+    <p>Use the multiple attribute to allwo the user to select more than one value:</p>
+    <form>
+        <select id="cars" name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit" value="submit" />
+    </form>
+    <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options</p>
+    <h3>#The textarea Element</h3>
+    <hr />
+    <p>The textarea element defines a multi-line input field (a text area:)</p>
+    <p>Example:</p>
+    <form>
+        <textarea name="message" rows="10" cols="30">The cat was playing in the garden</textarea><br />
+        <input type="submit" />
+    </form>
+    <p>The rows attribute specifies the visible number of lines in a text area.</p>
+    <p>The clos attribute specifies the visible width of a text area.</p>
+    <p>You can also define the size of the text area by using CSS:</p>
+    <form>
+        <textarea name="message" style="width: 200px; height: 300px;">The cat was playing in the garden.</textarea>
+        <br />
+        <input type="submit" value="submit" />
+    </form>
+    <h3>#The button Element.</h3>
+    <hr />
+    <p>The button element defines a clickable button:</p>
+    <strong>The button Element</strong>
+    <button type="button" onclick="alert('Hello world!')">Click me</button>
+    <p><strong>Note:</strong> Always specify the type attribute ofr the button element. different browsers may use
+        different default types for the button element.</p>
+    <h3>#The fieldset and legend elements</h3>
+    <hr />
+    <p>The fieldset element is used to group related data in a frorm.</p>
+    <p>The legend element defines a caption for the fieldset element.</p>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First Name:</label><br />
+            <input type="text" id="fname" name="fname" value="Jhon" /><br />
+            <label for="lname">Last Name:</label><br />
+            <input type="text" id="lname" name="lname" value="Doe" /><br />
+            <input type="submit" value="submit" />
+
+        </fieldset>
+    </form>
+    <h3>#The datalist Element</h3>
+    <hr />
+    <p>The datalist element specifies a list of pre-defined option for an input element.</p>
+    <p>Usesrs will see a drop-down list of the pre-defined option as they input data.</p>
+    <p>The list attribute of the input element, must refer to the id attribute of the datalist element.</p>
+    <form>
+        <input list="browsers" name="browser" />
+        <datalist id="browsers">
+            <option value="Internet Explorer" />
+            <option value="Firefox" />
+            <option value="Chrome" />
+            <option value="Opera" />
+            <option value="Safari" />
+        </datalist>
+        <input type="submit" value="submit" />
+    </form>
+    <h3>#The output Element.</h3>
+    <hr />
+    <p>The output element represents the result of a calculation( like one performed by a script).</p>
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" name="a" value="50" />100+<br />
+        <input type="number" id="b" value="50" /><br />
+        output:<output name="x" for="a b"></output>
+
+    </form>
+</body>
+
+</html>
